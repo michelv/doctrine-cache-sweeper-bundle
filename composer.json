@@ -1,0 +1,25 @@
+{
+    "name": "michelv/doctrine-cache-sweeper-bundle",
+    "type": "symfony-bundle",
+    "description": "Automagically invalidate cache keys when entities change.",
+    "keywords": ["symfony","doctrine","cache","sweeper","invalidate","invalidation"],
+    "homepage": "https://github.com/michelv/doctrine-cache-sweeper-bundle",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Michel Valdrighi",
+            "email": "hello@miche.lv",
+            "homepage": "http://miche.lv"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Michelv\\DoctrineCacheSweeperBundle\\": "" }
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "symfony/framework-bundle": ">=2.3"
+    }
+}
