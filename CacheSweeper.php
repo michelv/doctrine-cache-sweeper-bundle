@@ -17,7 +17,7 @@ class CacheSweeper
      */
     public function addService(CacheSweepableInterface $service)
     {
-        $this->services = array_merge($this->services, $service);
+        $this->services[] = $service;
     }
 
     /**
@@ -53,7 +53,7 @@ class CacheSweeper
                 }
 
                 foreach ($this->services as $service) {
-                    $keys = array_merge($keys, $repository->getSweepableKeys($entity, $type));
+                    $keys = array_merge($keys, $service->getSweepableKeys($entity, $type));
                 }
             }
         }
