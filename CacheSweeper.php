@@ -30,7 +30,7 @@ class CacheSweeper
         $em = $eventArgs->getEntityManager();
         $cache = $em->getConfiguration()->getResultCacheImpl();
 
-        if ($cache === null) {
+        if (!($cache instanceof Cache)) {
             // no result cache, no point gathering cache keys
             return;
         }
@@ -73,6 +73,6 @@ class CacheSweeper
 
         foreach ($keys as $key) {
             $cache->delete($key);
-        }           
+        }
     }
 }
